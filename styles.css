@@ -41,13 +41,23 @@ nav {
   gap: 30px;
 }
 
-.logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 36px;
-  color: var(--burgundy);
-  text-decoration: none;
-  font-weight: 600;
+/* SOPHIE-O PRIMARY LOGO */
+
+.logo img {
+  display: block;
+  width: 260px;
+  max-width: 100%;
+  height: auto;
 }
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .logo img {
+    width: 200px;
+  }
+}
+
 
 .nav-links {
   display: flex;
