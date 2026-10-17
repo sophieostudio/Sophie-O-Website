@@ -1,0 +1,283 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* SOPHIE-O DESIGN STUDIO */
+
+:root {
+  --pink: #EBD2DA;
+  --rose: #C98DA0;
+  --burgundy: #755260;
+  --cream: #FAF7F4;
+  --charcoal: #302F34;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* NAVIGATION */
+
+header {
+  padding: 25px 7%;
+  background: var(--cream);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  color: var(--burgundy);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--charcoal);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--rose);
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 82vh;
+  background: var(--pink);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px 12%;
+}
+
+.eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--burgundy);
+  margin-bottom: 35px;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(64px, 8vw, 125px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+  color: var(--burgundy);
+  max-width: 1100px;
+  margin-bottom: 35px;
+}
+
+.hero p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 470px;
+  margin-bottom: 35px;
+}
+
+.hero-button {
+  display: inline-block;
+  background: var(--burgundy);
+  color: white;
+  padding: 16px 28px;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: background 0.3s;
+}
+
+.hero-button:hover {
+  background: var(--charcoal);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  header {
+    padding: 22px 6%;
+  }
+
+  nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 85px 7%;
+    min-height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 12vw, 78px);
+    letter-spacing: -1px;
+  }
+
+  .eyebrow {
+    letter-spacing: 2px;
+  }
+}
+
+/* ABOUT SECTION */
+
+.about {
+  background: var(--cream);
+  padding: 130px 12%;
+}
+
+.about-content {
+  max-width: 800px;
+}
+
+.about h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(60px, 7vw, 105px);
+  font-weight: 500;
+  color: var(--burgundy);
+  margin-bottom: 30px;
+  line-height: 1;
+}
+
+.about-content > p:not(.eyebrow) {
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+  max-width: 650px;
+}
+
+@media (max-width: 700px) {
+  .about {
+    padding: 80px 7%;
+  }
+}
+
+/* SERVICES SECTION */
+
+.services {
+  background: var(--pink);
+  padding: 120px 8%;
+}
+
+.services-header {
+  max-width: 750px;
+  margin-bottom: 65px;
+}
+
+.services-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(65px, 8vw, 110px);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--burgundy);
+  margin-bottom: 20px;
+}
+
+.pink-dot {
+  color: var(--charcoal);
+}
+
+.services-header > p:last-child {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.service-card {
+  background: var(--cream);
+  padding: 40px 30px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-number {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--rose);
+  margin-bottom: 35px;
+}
+
+.service-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--burgundy);
+  margin-bottom: 20px;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+.service-type {
+  margin-top: auto;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--burgundy);
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services {
+    padding: 80px 7%;
+  }
+
+  .service-card {
+    min-height: 270px;
+  }
+}
